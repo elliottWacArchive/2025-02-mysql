@@ -1,4 +1,6 @@
 <?php
 
 require 'conn.php';
-require 'commands/showtables.php';
+require 'command.php';
+require 'addSpace.php';
+require 'makeTable.php';
