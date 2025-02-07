@@ -1,6 +1,7 @@
 <?php
 
-function addSpace($text, $size) {
+function addSpace($text, $size)
+{
     $text = strval($text);
     $text = trim($text);
     $gap = $size - mb_strlen($text, 'UTF-8');

@@ -1,6 +1,7 @@
 <?php
 
-function command($input) {
+function command($input)
+{
     global $conn;
     $sql = $input;
     try {
@@ -11,7 +12,7 @@ function command($input) {
         $res = $stmt->fetchAll();
         $columnCount = $stmt->columnCount();
         $rowCount = $stmt->rowCount();
-    } catch(PDOException $e) {
+    } catch (PDOException $e) {
         echo "PDO : Connection failed: " . $e->getMessage() . "\n";
     }
 

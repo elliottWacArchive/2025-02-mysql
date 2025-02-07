@@ -1,11 +1,11 @@
 <?php
 
 function makeTables($titles, $content, $column, $line)
-{   
+{
     $columnMax = [];
     $outputLen = 2;
-    for($i = 0; $i < $column; $i++) {
-        foreach($content[$i] as $lin) {
+    for ($i = 0; $i < $column; $i++) {
+        foreach ($content[$i] as $lin) {
             if (!isset($columnMax[$i]) || mb_strlen($lin, 'UTF-8') > $columnMax[$i]) {
                 $columnMax[$i] = strlen($lin);
             }
@@ -22,7 +22,7 @@ function makeTables($titles, $content, $column, $line)
     }
     echo "+\n| ";
     foreach ($titles as $n => $title) {
-        addSpace($title ,$columnMax[$n]);
+        addSpace($title, $columnMax[$n]);
         echo " | ";
     }
     echo "\n";
